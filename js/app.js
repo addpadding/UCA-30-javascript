@@ -1,280 +1,339 @@
-// ===
+// function
 
+var x_01 = 2
+var y_01 = 3
 
-
-
-
-
-var x = 2;
-var y = 3;
-
-var x = 2,
-    y = 3;
-
-console.log(x + y);
-
-x = y;
-console.log(x + y);
-
-var x2 = 2,
-    y2 = 3;
-
-console.log(x2 - y2);
-
-console.log(x2 * y2);
-
-console.log(x2 / y2);
-
-
-var x03 = 11,
-    y03 = 3;
-
-console.log(x03 % y03);
+console.log(x_01 + y_01)
+console.log("x_01");
 // =====
 
+// function definition
+function log_fun_02() {
+    var x_02 = 2
+    var y_02 = 3
 
-var x4 = 11,
-    y4 = 3;
-
-console.log(y4 % x4);
-// =====
-
-
-var x5 = 8;
-
-x5++; // post increment
-++x5; // pre increment
-
-console.log(x5++); // 10
-// 11
-console.log(++x5); // 12
-console.log(--x5); // 11
-console.log(x5--); // 11
-
-console.log(x5);
-
-x++
-x = x + 1
-// =====
-
-var x6 = 8;
-
-x6 = x6 ** 2;
-
-console.log(x6)
-// =====
-
-var x7 = 8;
-
-
-console.log(x7)
-// =====
-
-var x8 = +8;
-
-
-console.log(x8)
-// =====
-
-var x9 = -8;
-
-
-console.log(x9)
-// =====
-
-console.log(+3)
-console.log(-3)
-console.log(+"3") // 3
-console.log(+true) // 1
-console.log(+false) // 0
-// =====
-
-var x10 = 2,
-    y10 = 2,
-    z10 = 2;
-
-x10 += 1; // x = x + 1 // x++
-
-y10 -= 1; // x = x - 1 
-
-z10 **= 5; // x = x ** 5
-
-
-// =====
-
-var x11 = 5;
-
-if (x11 == 5) {
-    console.log("yes x11")
-} else {
-    console.log("no x11")
+    console.log(x_02 + y_02)
+    console.log("x_02");
 }
+
+// trigger function   call function
+log_fun_02()
+
 // =====
 
-var x12 = 6;
-
-if (x12 == 5) {
-    console.log("yes x12")
-} else {
-    console.log("no x12")
+// parameters
+function log_fun_03(x_03, y_03) {
+    //===
+    console.log(x_03 + y_03)
+    //===
 }
+
+log_fun_03(1, 2) // arguments
+log_fun_03(5, 6)
+
+console.log("x_03");
 // =====
 
-var x13 = 6,
-    y13 = 5;
 
-if (x13 == 6 && y13 == 5) {
-    console.log("yes x13")
-} else {
-    console.log("no x13")
+function fun_04(x_04, y_04) {
+    //===
+    var z_04 = 2;
+    return z_04;
+    //===
 }
+
+var data_04 = fun_04()
+console.log(data_04)
+
+console.log("x_04");
 // =====
 
-var x14 = 6,
-    y14 = 5;
+// function expressions
 
-if (x14 == 6 && y14 == 6) {
-    console.log("yes x14")
-} else {
-    console.log("no x14")
+var fn_05 = function () {
+    console.log("expressions function");
 }
+fn_05()
+
+console.log("x_05");
 // =====
 
-var x15 = 6,
-    y15 = 5;
-
-if (x15 == 6 || y15 == 6) {
-    console.log("yes x15")
-} else {
-    console.log("no x15")
+var fn_06 = function test_06() {
+    console.log("test");
 }
+fn_06()
+
+console.log("x_06");
 // =====
 
-var x16 = 6,
-    y16 = 5;
+(function code_07() {
+    //===
+    console.log("code_07");
+    //===
+})();
 
-if (x16 == 8 || y16 == 6) {
-    console.log("yes x16")
-} else {
-    console.log("no x16")
+
+console.log("x_07");
+// =====
+
+// Events
+
+document.getElementById("btn-08").onclick = function () {
+    document.getElementById("demo-08").innerHTML = "js"
 }
+
+console.log("x_08 onclick");
 // =====
 
-var x17 = 6,
-    y17 = 5;
-
-if (!(x17 == 6)) {
-    console.log("yes x17")
-} else {
-    console.log("no x17")
+document.getElementById("btn-09").ondblclick = function () {
+    document.getElementById("demo-09").innerHTML = "js"
 }
+
+console.log("x_09 ondblclick");
 // =====
 
-var x18 = 6,
-    y18 = 5;
-
-if (!(y18 == 6)) {
-    console.log("yes x18")
-} else {
-    console.log("no x18")
+document.getElementById("btn-10").onmouseenter = function () {
+    document.getElementById("demo-10").innerHTML = "js"
 }
+
+console.log("x_10 onmouseenter");
 // =====
 
-var x19 = 6,
-    y19 = 5;
+var x_11 = 1;
 
-if (x19 == 6) {
-    console.log("yes x19")
-} else if (x19 == 7) {
-    console.log("no x19")
-} else {
-    console.log("wrong x19")
+document.getElementById("btn-11").onmousemove = function () {
+    document.getElementById("demo-11").innerHTML = ++x_11;
 }
+
+console.log("x_11 onmousemove");
 // =====
 
-var x20 = 7,
-    y20 = 5;
+var x_12 = 1;
 
-if (x20 == 6) {
-    console.log("yes x20")
-} else if (x20 == 7) {
-    console.log("no x20")
-} else {
-    console.log("wrong x20")
+document.getElementById("btn-12").onmouseenter = function () {
+    document.getElementById("demo-12").innerHTML = ++x_12;
 }
+
+console.log("x_12 onmouseenter");
 // =====
 
-var x21 = 70,
-    y21 = 5;
+var x_13 = 1;
 
-if (x21 == 6) {
-    console.log("yes x21")
-} else if (x21 == 7) {
-    console.log("no x21")
-} else {
-    console.log("wrong x21")
+document.getElementById("btn-13").onmouseleave = function () {
+    document.getElementById("demo-13").innerHTML = ++x_13;
 }
+
+console.log("x_13 onmouseleave");
 // =====
 
-// switch
-var x22 = 6;
 
-switch (x22) {
-    case 6:
-        console.log("yes x22");
-        break;
 
-    case 7:
-        console.log("no x22");
-        break;
+var btn_14 = document.getElementById("btn-14");
+var div_14 = document.getElementById("demo-14");
 
-    default:
-        console.log("default x22");
+
+console.log(btn_14)
+console.log(div_14)
+
+btn_14.onmouseleave = function () {
+    div_14.innerHTML = "code";
 }
+
+console.log("x_14 onmouseleave");
 // =====
 
-var x23 = 7;
 
-switch (x23) {
-    case 6:
-        console.log("yes x23");
-        break;
 
-    case 7:
-        console.log("no x23");
-        break;
+var btn_15 = document.getElementById("btn-15");
+var div_15 = document.getElementById("div-15");
 
-    default:
-        console.log("default x23");
+
+// btn_15.onmouseleave = ;
+
+function action_15() {
+    div_15.innerHTML = "code_15";
+    console.log("code_15")
 }
+
+action_15();
+
+console.log("x_15 ");
 // =====
 
-var x24 = 70;
 
-switch (x24) {
-    case 6:
-        console.log("yes x24");
-        break;
 
-    case 7:
-        console.log("no x24");
-        break;
+var btn_16 = document.getElementById("btn-16");
+var div_16 = document.getElementById("div-16");
 
-    default:
-        console.log("default x24");
+
+
+function action_16() {
+    div_16.innerHTML = "code_16";
+    console.log("code_16")
 }
+
+btn_16.onclick = action_16;
+
+
+
+console.log("x_16 ");
 // =====
 
-var x25 = 6;
+// ========== (17) ==========
 
-switch (x25) {
-    case 6:
-        console.log("yes x25");
+// keybord events
 
-    case 7:
-        console.log("no x25");
+var input_17 = document.getElementById("input-17");
+console.log(input_17)
 
-    default:
-        console.log("default x25");
+input_17.onkeyup = function () {
+    console.log("test 17")
 }
+
+
+
+console.log("x_17 onkeyup");
 // =====
+
+// ========== (18) ==========
+
+// keybord events
+
+var input_18 = document.getElementById("input-18");
+console.log(input_18)
+
+input_18.onkeydown = function () {
+    console.log("test 18")
+}
+
+
+
+console.log("x_18 onkeydown");
+// =====
+
+// ========== (19) ==========
+
+// keybord events
+
+var input_19 = document.getElementById("input-19");
+console.log(input_19)
+
+input_19.onkeyup = function () {
+    console.log("test 19")
+}
+
+
+
+console.log("x_19 onkeyup");
+
+// ========== (20) ==========
+
+// keybord events
+
+var input_20 = document.getElementById("input-20");
+console.log(input_20)
+
+input_20.onkeypress = function () {
+    console.log("test 20")
+}
+
+
+
+console.log("x_20 onkeypress");
+
+// ========== (21) ==========
+
+
+window.onload = function () {
+    // alert("yes loaded")
+    // console.log("loaded 21")
+
+}
+
+
+
+console.log("x_21 onload"); // fff
+
+// ========== (22) ==========
+
+var input_22 = document.getElementById("input-22");
+
+input_22.addEventListener("keyup", function (prams) {
+    console.log("test 22")
+})
+
+
+
+console.log("x_22 addEventListener"); // fff
+
+// ========== (23) ==========
+
+var input_23 = document.getElementById("input-23");
+
+function fun_23() {
+    console.log("test 23")
+}
+
+input_23.addEventListener("keyup", fun_23);
+
+
+
+console.log("x_23"); // fff
+
+// ========== (24) ==========
+
+// loop
+
+/*
+    - intialization
+    - condition
+    - update
+ */
+
+for (var x_24 = 1; x_24 <= 5; x_24++) {
+    console.log(x_24)
+    console.log("test 24 for")
+}
+
+
+console.log("x_24 loop for"); // fff
+
+// ========== (25) ==========
+
+
+var x_25 = 1;
+while (x_25 <= 5) {
+    console.log(x_25)
+    console.log("test 25 while")
+    x_25++
+}
+
+
+console.log("x_25 loop while"); // fff
+
+// ========== (26) ==========
+
+
+var x_26 = 1;
+
+do {
+    console.log(x_26)
+    console.log("test 26 do")
+    x_26++
+
+} while (x_26 <= 5);
+
+
+console.log("x_26 loop do"); // fff
+
+// ========== (27) ==========
+
+// bad for
+
+
+// for (x_27 = 5; x_27 > 1; x_27++) {
+//     console.log(x_27)
+//     console.log("bad (-__-) 27")
+// }
+
+console.log(" bad (-__-) "); // fff
