@@ -1,0 +1,22 @@
+[
+
+    {
+        "name" : "ahmed",
+        "age" : 20,
+        "phone" : 12345
+    },
+
+    {
+        "string" : "name",
+        "number" : 20,
+        "Boolean" : true,
+        "object" : {},
+        "array" : [],
+        "array_nested_object" : [
+            {}
+        ],
+        "null" : null
+
+    }
+
+]
