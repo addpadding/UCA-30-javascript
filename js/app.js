@@ -1,44 +1,32 @@
 
-var obj = {
+// ========= (001) =========
 
-    // name: value,
-
-}
-
-var obj_02 = [
-
-    {
-        "name": "ahmed",
-        "age": 20,
-        "phone": 12345
-    },
-
-    {
-        "string": "name",
-        "number": 20,
-        "Boolean": true,
-        "object": {},
-        "array": [],
-        "array_nested_object": [
-            {}
-        ],
-        "null": null
-
+function lodad_Data_001() {
+    // =========
+    var http_001 = new XMLHttpRequest();
+    // =========
+    console.log(http_001)
+    // =========
+    http_001.onreadystatechange = function () {
+        // =========
+        // console.log(this.readyState)
+        console.log(this.status)
+        // =========
+        if (this.readyState == 4 && this.status == 200) {
+            // =========
+            // console.log(this.responseText);
+            // console.log(typeof this.responseText);
+            console.log(JSON.parse(this.responseText));
+            // =========
+        }
+        // =========
     }
-
-]
-
-console.log(obj_02)
-
-// stringify = object => string
-var str_02 = JSON.stringify(obj_02)
-
-console.log(str_02)
-
-// parse = string => object
-var ob_02 = JSON.parse(str_02)
-
-console.log(ob_02)
-
-
-document.getElementById("div").innerHTML = str_02
+    // =========
+    // Asy-nch-ron-ous لا استنى
+    // synchronous  استنى
+    // =========
+    http_001.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+    http_001.send()
+    // =========
+}
+lodad_Data_001()
