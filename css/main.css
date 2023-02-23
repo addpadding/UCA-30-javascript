@@ -1,0 +1,14 @@
+button {
+    display: block;
+    background-color: royalblue;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+.demo {
+    width: 200px;
+    height: 200px;
+    background-color: #808080;
+    color: #fff;
+}

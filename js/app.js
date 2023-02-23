@@ -1,177 +1,250 @@
 // ========= (001) =========
 
-// Document Object Model
 
-// console.dir(document);
+function fun_001() {
+    // =========
+    console.log("result_001");
+    // =========
+}
+// =========
 
-// console.log(document.title);
+var btn_001 = document.getElementById("btn_001");
 
-// document.title = "new js"
+btn_001.onclick = fun_001;
 
-// console.log(document.body);
-// console.log(document.head);
-// console.log(document.forms);
-// console.log(document.links);
-
-// console.log(document.documentElement);
-
-// console.log(document.domain);
-
-// console.log(document.URL);
-
-// console.log(document.all);
-
-// console.log(document.all[2]);
-
-// console.log(document.doctype);
-
-// console.log("001 = Document Object Model");
+console.log("---001---");
 
 // ========= (002) =========
 
-var heading_002 = document.getElementById("demo");
+var btn_002 = document.getElementById("btn_002")
 
-console.log(heading_002)
-console.log(heading_002.innerText)
-console.log("---innerText---");
-console.log(heading_002.textContent)
-console.log("---textContent---");
-
-heading_002.innerText = "test html"
-heading_002.textContent = "js js"
-heading_002.textContent = "Hello Dom"
-
-heading_002.style.color = "#fff"
-heading_002.style.fontSize = "30px"
-heading_002.style.backgroundColor = "green"
+btn_002.addEventListener("click", function () {
+    // =========
+    console.log("result_002");
+    // =========
+})
 
 
-console.log("002 = getElementById");
-
+console.log("---002---");
 
 // ========= (003) =========
 
-var class_003 = document.getElementsByClassName("desc")
-console.log(class_003[0])
-console.log(class_003[1])
 
-console.log(class_003[1].getAttribute("class"))
-
-class_003[1].setAttribute("title", "aaaaa")
-
-console.log(class_003[1])
-
-// class_003[0].style.color = "red"
-// class_003[1].style.color = "red"
-
-for (var i = 0; i < class_003.length; i++) {
-    // ========
-    class_003[i].style.color = "red"
-    // ========
+function fun_003() {
+    // =========
+    console.log("result_003");
+    // =========
 }
+// =========
 
+var btn_003 = document.getElementById("btn_003")
 
-console.log("003 = ClassName");
+btn_003.addEventListener("click", fun_003)
+
+console.log("---003---");
 
 // ========= (004) =========
-var pr_004 = document.getElementsByTagName("p")
-console.log(pr_004)
-
-pr_004[1].style.color = "blue"
-pr_004[1].textContent = "test"
 
 
+function fun_004() {
+    // =========
+    console.log("result_004");
+    // =========
+}
+// =========
 
-console.log("004 = TagName");
+var btn_004 = document.getElementById("btn_004")
+
+btn_004.addEventListener("dblclick", fun_004)
+
+console.log("---004--- dblclick");
+// -----------------------------------------------
 
 // ========= (005) =========
 
+function fun_005(event) {
+    // =========
+    console.log("result_005", event);
+    // =========
+}
+// =========
 
-var x_005 = document.querySelector("#demo");
-var p_005 = document.querySelector("p");
+var btn_005 = document.getElementById("btn_005")
 
-console.log(p_005)
+btn_005.addEventListener("dblclick", fun_005)
 
-console.log(x_005.innerText)
-
-x_005.innerText += " hhh"
-
-
-console.log("005 = querySelector");
+console.log("---005---");
+// -----------------------------------------------
 
 // ========= (006) =========
 
+function fun_006(event) {
+    // =========
+    console.log("result_006", event.target);
+    console.log("result_006", event.target.id);
+    console.log("result_006", event.target.className);
+    console.log("result_006", event.target.textContent);
+    console.log("result_006", event.clientX);
+    console.log("result_006", event.clientY);
+    console.log("result_006", event.offsetX);
+    console.log("result_006", event.type);
+    // =========
+}
+// =========
 
-var x_006 = document.querySelectorAll("p");
-console.log(x_006)
+var btn_006 = document.getElementById("btn_006")
 
-x_006[0].style.color = "green"
+btn_006.addEventListener("click", fun_006)
 
-console.log("006 = Selector All");
+console.log("---006--- event.target");
+// -----------------------------------------------
 
 // ========= (007) =========
 
 
-var input_007 = document.querySelector("input[type=text]");
-var submit_007 = document.querySelector("input[type=submit]");
-
-console.log(input_007)
-console.log(submit_007)
-
-submit_007.value = "code"
-
-console.log(input_007.parentNode)
-console.log(input_007.parentElement)
+function fun_007() {
+    // =========
+    console.log("result_007");
+    // =========
+}
+// =========
+fun_007
 
 
-console.log("007 = input");
+var demo_007 = document.querySelector(".demo_007")
+
+demo_007.addEventListener("mousedown", fun_007)
+
+
+console.log("---007--- mousedown");
+// -----------------------------------------------
 
 // ========= (008) =========
 
 
-var x_008 = document.querySelector("form");
-
-console.log(x_008)
-console.log(x_008.childNodes)
-console.log(x_008.children)
-
-console.log(x_008.firstChild)
-console.log(x_008.firstElementChild)
-
-console.log(x_008.nextSibling)
-console.log(x_008.nextElementSibling)
-
-console.log(x_008.previousSibling)
-console.log(x_008.previousElementSibling)
+function fun_008() {
+    // =========
+    console.log("result_008");
+    // =========
+}
+// =========
+fun_008
 
 
-console.log("008 = form");
+var demo_008 = document.querySelector(".demo_008")
+
+demo_008.addEventListener("mouseup", fun_008)
+
+
+console.log("---008--- mouseup");
+// -----------------------------------------------
 
 // ========= (009) =========
 
 
-var my_div_009 = document.createElement("div");
-
-console.log(my_div_009)
-
-my_div_009.id = "myid"
-my_div_009.className = "myclass"
-
-my_div_009.setAttribute("id", "myid_2")
-my_div_009.setAttribute("class", "myclass_2")
-
-console.dir(my_div_009)
-
-var text_009 = document.createTextNode("hello dom js")
-my_div_009.appendChild(text_009)
-
-console.log(my_div_009)
-
-var ct_009 = document.querySelector(".container")
-var span_009 = document.querySelector("#myspan")
-
-ct_009.insertBefore(my_div_009, span_009)
+function fun_009() {
+    // =========
+    console.log("result_009");
+    // =========
+}
+// =========
+fun_009
 
 
+var demo_009 = document.querySelector(".demo_009")
 
-console.log("009 = create");
+demo_009.addEventListener("mouseenter", fun_009)
+
+
+console.log("---009--- mouse-enter");
+// -----------------------------------------------
+
+// ========= (010) =========
+
+
+function fun_010(event) {
+    // =========
+    console.log(event.type)
+    // console.log("result_010");
+    // =========
+}
+// =========
+
+
+var demo_010 = document.querySelector(".demo_010")
+
+demo_010.addEventListener("mouseenter", fun_010)
+demo_010.addEventListener("mouseover", fun_010)
+
+
+console.log("---010--- mouse-over");
+// -----------------------------------------------
+
+
+// ========= (011) =========
+
+
+function fun_011() {
+    // =========
+    console.log("result_011");
+    // =========
+}
+// =========
+fun_011
+
+
+var demo_011 = document.querySelector(".demo_011")
+var input_011 = document.querySelector("input")
+
+demo_011.addEventListener("mouseleave", fun_011)
+demo_011.addEventListener("mouseout", fun_011)
+demo_011.addEventListener("mousemove", fun_011)
+
+
+console.log("---011--- mouse");
+// -----------------------------------------------
+
+
+// ========= (012) =========
+
+
+
+
+
+var input_012 = document.querySelector(".input_012")
+var select = document.querySelector("#select")
+var form = document.querySelector("form")
+var input_222 = document.querySelector(".input_222")
+
+input_012.addEventListener("keydown", fun_012)
+input_012.addEventListener("keyup", fun_012)
+input_012.addEventListener("keypress", fun_012)
+input_012.addEventListener("focus", fun_012)
+input_012.addEventListener("blur", fun_012)
+input_012.addEventListener("cut", fun_012)
+input_012.addEventListener("paste", fun_012)
+
+input_012.addEventListener("input", fun_012)
+select.addEventListener("change", fun_select)
+
+
+
+form.addEventListener("submit", fun_form)
+
+input_222.addEventListener("change", fun_012)
+
+function fun_012(e) {
+    console.log(e.type)
+}
+
+function fun_select(e) {
+    console.log(e.target.value)
+}
+
+function fun_form(eee) {
+    eee.preventDefault()
+    console.log(eee.type)
+}
+
+// -----------------------------------------------
+
