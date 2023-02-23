@@ -1,15 +1,7 @@
 // ========= (000) =========
 
-// ffffff
-var car_000 = {
 
-    name: "BMW",
-    year: "2014",
-
-}
-
-console.log(car_000.name)
-console.log(car_000.year)
-
+var x_000 = document.ffff("aaa");
+console.log(x_000)
 
 console.log("000 = fff");
