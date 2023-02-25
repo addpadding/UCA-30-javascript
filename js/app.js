@@ -134,12 +134,67 @@
 
 
 
-const ints = [1, 2, 3, 4, 8]
+// const ints = [1, 2, 3, 4, 8]
 
-// const even_s = ints.filter(function (item) {
-//     return item % 2 === 0;
-// })
+// // const even_s = ints.filter(function (item) {
+// //     return item % 2 === 0;
+// // })
 
-const even_s = ints.filter(item => item % 2 === 0)
+// const even_s = ints.filter(item => item % 2 === 0)
 
-console.log(even_s)
+// console.log(even_s)
+
+
+
+
+// const words = ["aaaaa", "bbbbb", "ccccc", "ddddddd", "eeeeeeee", "ffffffffff",]
+
+// const result = words.filter(word_item => word_item.length > 6)
+
+// console.log(words)
+// console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+// let friends = [{
+//     name: 'Anna',
+//     books: ['Bible', 'Harry Potter'],
+//     age: 21
+// }, {
+//     name: 'Bob',
+//     books: ['War and peace', 'Romeo and Juliet'],
+//     age: 26
+// }, {
+//     name: 'Alice',
+//     books: ['The Lord of the Rings', 'The Shining'],
+//     age: 18
+// }];
+
+
+// let allbooks = friends.reduce(function (prev, curr) {
+//     return [...prev, ...curr.books];
+// }, ['Alphabet']);
+
+// console.log(allbooks)
+
+
+
+
+
+
+
+const arr = [1, 2, 3, -1, 4]
+
+const has_Negative_Numbers = arr.some(function (item) {
+    return item < 0;
+});
+console.log(has_Negative_Numbers)
