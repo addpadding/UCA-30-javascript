@@ -1,200 +1,184 @@
+// let carName = "BMW"
+// let model = 2010
+
+// function fun_n(carName, model) {
+//     console.log(carName, model)
+// }
+
+// fun_n(carName, model)
 
 
-// try {
-//     // code to run
-//     function test() {
-//         console.log(test)
+
+// let car = {
+//     model: 2010,
+//     carName: "BMW",
+
+//     fun_n: function () {
+//         console.log(this.model, this.carName);
 //     }
-
-//     test()
 // }
 
-// catch (e) {
-//     console.log(e.description)
+// car.fun_n()
+
+
+// let obj = {
+//     name: "hhh",
+//     hello: function () {
+//         console.log("hello");
+//     },
 // }
 
+// obj.hello()
 
-// var x = 12;
-// console.log(x)
-
-// "use strict";
-
-// myfun()
-
-// function myfun() {
-//     let y = 3.14
+// let obj = {
+//     name: "hhh",
+//     hello: function () {
+//         console.log("hello");
+//     },
 // }
 
+// obj.hello()
 
-// x = 3.14
-// myfun()
-
-// function myfun() {
-//     "use strict";
-//     y = 3.14
+// let obj2 = {
+//     name: "hhh",
+//     hello: function () {
+//         console.log("hello");
+//     },
 // }
 
+// obj.hello()
+// obj2.hello()
 
-// "use strict";
 
-// x = 3.14
-
-// delete x
-
-// "use strict";
-// function x(p1, p1) {
-
+// function fun(name) {
+//     return {
+//         name,
+//         hello: function () {
+//             console.log("hello");
+//         },
+//     }
 // }
 
+// const fun1 = fun("hhh")
+// fun1.hello()
 
+// const fun2 = fun("aaa")
+// fun2.hello()
 
-// var arr = [1, 2, 3]
+// ======== (01) ========
 
-// arr.forEach(function (Item1, index, array) {
+function fun_01(item) {
+    this.name = item
+    this.Hello_fun = function () {
+        console.log("hello");
+    }
+}
 
-//     console.log(Item1, index, array)
-// });
+const obj_01 = new fun_01("hamza")
 
+// ========================================
+console.log("---01---");
+// ========================================
 
 
+// ======== (02) ========
 
-// const arr = [1, 2, 3]
+function fun_02(item_name, item_age) {
+    let obj_02 = {}
+    obj_02.name = item_name
+    obj_02.age = item_age
+    return obj_02
+}
 
-// // const doubled = arr.map(function (item) {
-// //     return item * 2;
-// // })
+const obj_023 = fun_02("hamza", 24)
+console.log(obj_023)
 
-// const doubled = arr.map((item) => item * 2)
+const obj_024 = fun_02("ahmed", 26)
+console.log(obj_024)
+// ========================================
+console.log("---02---");
+// ========================================
 
-// console.log(arr)
-// console.log(doubled)
 
+// ======== (03) ========
+function fun_03(item) {
+    // var this = {}
 
+    this.name = item
+    this.Hello_fun = function () {
+        console.log("hello");
+    }
 
+    // return this;
+}
 
+const obj_03 = new fun_03("hamza")
+console.log(obj_03)
 
+// ========================================
+console.log("---03---");
+// ========================================
 
 
+// ======== (04) ========
+function fun_04(item) {
+    // var this = {}
 
+    this.name = item
+    this.Hello_fun = function () {
+        console.log("hello");
+    }
 
+    // return this;
+}
 
-// const numbers = [1, 4, 9, 16]
+const obj_04 = new fun_03("hamza")
+console.log(obj_03.constructor)
 
-// // let roots = numbers.map(function (num) {
-// //     return Math.sqrt(num)
-// // })
+// ========================================
+console.log("---04---");
+// ========================================
 
-// const roots = numbers.map(num => Math.sqrt(num))
+// ======== (05) ========
 
-// console.log(roots)
-// console.log(numbers)
+let obj_05 = {
+    name: "hamza",
+    hello_fun_05: function () {
+        console.log("hello");
+    },
+}
 
+let obj_051 = {}
+let obj_052 = new Object()
 
+console.log(obj_05.constructor)
 
+// ========================================
+console.log("---05---");
+// ========================================
 
+// ======== (06) ========
 
+let obj_06_car = {}
 
 
+obj_06_car.name = "bmw"
 
-// let kv_array = [
+let obj_06_model = "model"
 
-//     { key: 1, value: 10, },
+obj_06_car[obj_06_model] = 2020
 
-//     { key: 2, value: 20, },
 
-//     { key: 3, value: 30, },
-// ]
+delete obj_06_car["model"]
+delete obj_06_car["name"]
+delete obj_06_car.name
 
-// let re_format_array = kv_array.map((obj_item) => {
-//     let r_obj = {}
+console.log(obj_06_car)
 
-//     r_obj[obj_item.key] = obj_item.value;
 
-//     // r_obj[1] = 10;
-//     // r_obj[2] = 20;
-//     // r_obj[3] = 30;
 
-//     // [
-//     //     {
-//     //         1: 10
-//     //     },
-//     //     {
-//     //         2: 20
-//     //     },
-//     //     {
-//     //         3: 30
-//     //     },
-//     // ]
 
-//     return r_obj
-// })
+// ========================================
+console.log("---06---");
+// ========================================
 
-// console.log(re_format_array)
-
-
-
-
-// const ints = [1, 2, 3, 4, 8]
-
-// // const even_s = ints.filter(function (item) {
-// //     return item % 2 === 0;
-// // })
-
-// const even_s = ints.filter(item => item % 2 === 0)
-
-// console.log(even_s)
-
-
-
-
-// const words = ["aaaaa", "bbbbb", "ccccc", "ddddddd", "eeeeeeee", "ffffffffff",]
-
-// const result = words.filter(word_item => word_item.length > 6)
-
-// console.log(words)
-// console.log(result)
-
-
-
-
-
-
-
-
-
-
-
-
-// let friends = [{
-//     name: 'Anna',
-//     books: ['Bible', 'Harry Potter'],
-//     age: 21
-// }, {
-//     name: 'Bob',
-//     books: ['War and peace', 'Romeo and Juliet'],
-//     age: 26
-// }, {
-//     name: 'Alice',
-//     books: ['The Lord of the Rings', 'The Shining'],
-//     age: 18
-// }];
-
-
-// let allbooks = friends.reduce(function (prev, curr) {
-//     return [...prev, ...curr.books];
-// }, ['Alphabet']);
-
-// console.log(allbooks)
-
-
-
-
-
-
-
-const arr = [1, 2, 3, -1, 4]
-
-const has_Negative_Numbers = arr.some(function (item) {
-    return item < 0;
-});
-console.log(has_Negative_Numbers)
