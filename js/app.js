@@ -1,287 +1,145 @@
-// function fun(a = 5, b = 1) {
-//     console.log(a, b);
-// }
-// fun(1, 3)
-// fun(1)
-// fun()
 
 
+// try {
+//     // code to run
+//     function test() {
+//         console.log(test)
+//     }
 
-
-// function call_fun(thing = fun_2()) {
-//     // return thing
-//     console.log(thing)
+//     test()
 // }
 
-// let number = 0
-// function fun_2() {
-//     number += 1
-//     return number
+// catch (e) {
+//     console.log(e.description)
 // }
 
-// // console.log(call_fun())
-// call_fun() // 1
-// call_fun() // 2
-// call_fun(5)
-// call_fun()
 
+// var x = 12;
+// console.log(x)
 
+// "use strict";
 
+// myfun()
 
-
-
-// function greet(name, greeting, message = greeting + " " + name) {
-//     return [name, greeting, message]
+// function myfun() {
+//     let y = 3.14
 // }
 
-// // greet("hamza", "hi")
-// console.log(greet("hamza", "hi", "test"))
+
+// x = 3.14
+// myfun()
+
+// function myfun() {
+//     "use strict";
+//     y = 3.14
+// }
+
+
+// "use strict";
+
+// x = 3.14
+
+// delete x
+
+// "use strict";
+// function x(p1, p1) {
+
+// }
 
 
 
+// var arr = [1, 2, 3]
 
+// arr.forEach(function (Item1, index, array) {
 
-
+//     console.log(Item1, index, array)
+// });
 
 
 
 
 // const arr = [1, 2, 3]
 
-// // console.log(...arr);
+// // const doubled = arr.map(function (item) {
+// //     return item * 2;
+// // })
 
-// function add(x, y, z) {
-//     console.log(x + y + z)
-// }
+// const doubled = arr.map((item) => item * 2)
 
-// add(...arr)
-// // add(1, 2, 3)
+// console.log(arr)
+// console.log(doubled)
 
 
 
 
 
 
-// const obj = {
-//     x: 1,
-//     y: 2
-// }
 
-// // const obj2 = {
-// //     x: 1,
-// //     y: 2,
-// //     z: 3
-// // }
-// // console.log(obj2)
 
-// const obj2 = {
-//     ...obj,
-//     z: 3,
-// }
-// console.log(obj2)
 
 
+// const numbers = [1, 4, 9, 16]
 
+// // let roots = numbers.map(function (num) {
+// //     return Math.sqrt(num)
+// // })
 
+// const roots = numbers.map(num => Math.sqrt(num))
 
-// const register = {
-//     firstName: "hamza",
-//     lastName: "nabil",
-//     password: "123",
-//     email: "gamil@gmail",
-// }
+// console.log(roots)
+// console.log(numbers)
 
-// // function make_register(firstName, lastName, password, email) {
-// //     console.log(firstName, lastName, password, email)
-// // }
-// // make_register(register.firstName, register.lastName)
 
 
-// function make_register(data) {
-//     // request
-//     // console.log(...data)
-// }
 
 
-// make_register(register)
 
 
 
+// let kv_array = [
 
+//     { key: 1, value: 10, },
 
+//     { key: 2, value: 20, },
 
+//     { key: 3, value: 30, },
+// ]
 
+// let re_format_array = kv_array.map((obj_item) => {
+//     let r_obj = {}
 
+//     r_obj[obj_item.key] = obj_item.value;
 
+//     // r_obj[1] = 10;
+//     // r_obj[2] = 20;
+//     // r_obj[3] = 30;
 
-//Dest-ruc-tions
-//Destructions
+//     // [
+//     //     {
+//     //         1: 10
+//     //     },
+//     //     {
+//     //         2: 20
+//     //     },
+//     //     {
+//     //         3: 30
+//     //     },
+//     // ]
 
-// const data = [1, 2, 3]
+//     return r_obj
+// })
 
-// const n1 = data[0]
-// const n2 = data[1]
-// const n3 = data[2]
+// console.log(re_format_array)
 
-// const data = [1, 2, 3]
 
-// const [n1, n2, n3] = data
-// console.log(n1, n2, n3)
 
-// const [, , n3] = data
-// console.log(n3)
 
+const ints = [1, 2, 3, 4, 8]
 
+// const even_s = ints.filter(function (item) {
+//     return item % 2 === 0;
+// })
 
+const even_s = ints.filter(item => item % 2 === 0)
 
-
-
-
-
-
-// const data2 = {
-//     x: 2,
-//     z: "hamza",
-//     y: "hamada"
-// }
-
-// // console.log(data2.x)
-
-// // const x = data2.x
-// // const z = data2.z
-
-// const { x, z: name, y = "test" } = data2
-// console.log(x, name, y)
-
-
-
-
-// let [name1, ...rest, name2] = ["first", "second", "test_1", "test_2"]
-// console.log(name1, rest, name2)
-
-// let [name1, name2, ...rest] = ["first", "second", "test_1", "test_2"]
-// console.log(name1, name2, rest)
-
-
-
-// let [name = "hamza", lastName = "Badr"] = ["nabil"]
-
-
-
-
-
-
-
-
-
-
-// const template =
-//     "<div>" +
-//     "< span > this is span </>" +
-//     "</div >";
-
-// const data = "test"
-
-// const template2 = `
-// <div>
-// <span> ${data} </span>
-// </div>
-// `
-// console.log(template2)
-
-
-
-
-
-
-// this
-
-// this.x = 2;
-// console.log(this.x)
-// console.log(window.x)
-
-// function test_this() {
-//     return this
-// }
-// console.log(test_this())
-
-// var person = {
-
-//     F_Name: " jon",
-//     L_Name: " doe",
-//     full_Name: function () {
-//         console.log(this)
-//         return this.F_Name + " " + this.L_Name
-//     }
-
-// }
-// console.log(person.full_Name())
-
-
-
-
-
-// var obj = {
-//     a: "custom"
-// }
-
-// var a = "Global"
-
-// function what_this() {
-//     return this.a // global
-// }
-
-// console.log(what_this());
-
-// // what_this.call(obj);
-// console.log(what_this.call(obj))
-
-// // what_this.apply(obj);
-// console.log(what_this.apply(obj));
-
-
-
-
-
-
-
-// var person1 = {
-//     fullName: function () {
-//         return this.firstName + " " + this.lastName;
-//     }
-// }
-
-// // console.log(person1.fullName())
-
-// var person2 = {
-//     firstName: "jon",
-//     lastName: "ddd"
-// }
-
-// // person1.fullName.call(person2)
-// console.log(person1.fullName.call(person2))
-
-
-
-const youtube = {
-
-    title: "coder",
-    tag_s: ["js", "html"],
-
-    return_Title_fun() {
-        console.log(this.title);
-    },
-
-    return_Tags_fun() {
-        var that = this
-
-        that.tag_s.forEach(function (tag) {
-            console.log(that);
-        })
-
-    },
-}
-
-// youtube.return_Title_fun();
-youtube.return_Tags_fun();
-
+console.log(even_s)
