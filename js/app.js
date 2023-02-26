@@ -1,80 +1,23 @@
-// let carName = "BMW"
-// let model = 2010
 
-// function fun_n(carName, model) {
-//     console.log(carName, model)
-// }
-
-// fun_n(carName, model)
-
-
-
-// let car = {
-//     model: 2010,
-//     carName: "BMW",
-
-//     fun_n: function () {
-//         console.log(this.model, this.carName);
-//     }
-// }
-
-// car.fun_n()
-
-
-// let obj = {
-//     name: "hhh",
-//     hello: function () {
-//         console.log("hello");
-//     },
-// }
-
-// obj.hello()
-
-// let obj = {
-//     name: "hhh",
-//     hello: function () {
-//         console.log("hello");
-//     },
-// }
-
-// obj.hello()
-
-// let obj2 = {
-//     name: "hhh",
-//     hello: function () {
-//         console.log("hello");
-//     },
-// }
-
-// obj.hello()
-// obj2.hello()
-
-
-// function fun(name) {
-//     return {
-//         name,
-//         hello: function () {
-//             console.log("hello");
-//         },
-//     }
-// }
-
-// const fun1 = fun("hhh")
-// fun1.hello()
-
-// const fun2 = fun("aaa")
-// fun2.hello()
 
 // ======== (01) ========
 
-function fun_01(item) {
-    this.name = item
-    this.Hello_fun = function () {
-        console.log("hello");
+function F_01(name_item) {
+    this.name = name_item
+
+    let B_01_2 = function () {
+        console.log("prise is 200");
+    }
+
+    this.F_01_2 = function () {
+        console.log(`person name is ${this.name}`);
+        B_01_2()
     }
 }
 
-const obj_01 = new fun_01("hamza")
+
+let B_01 = new F_01("hamza")
+B_01.F_01_2()
 
 // ========================================
 console.log("---01---");
@@ -83,57 +26,58 @@ console.log("---01---");
 
 // ======== (02) ========
 
-function fun_02(item_name, item_age) {
-    let obj_02 = {}
-    obj_02.name = item_name
-    obj_02.age = item_age
-    return obj_02
+function person_02(name_item) {
+    this.name = name_item
+
+    this.data_02 = function () {
+        console.log(`person name is ${this.name}`);
+    }
 }
 
-const obj_023 = fun_02("hamza", 24)
-console.log(obj_023)
+// function person_022(name_item) {
+//     this.name = name_item
 
-const obj_024 = fun_02("ahmed", 26)
-console.log(obj_024)
+//     this.data_02 = function () {
+//         console.log(`person name is ${this.name}`);
+//     }
+
+//     this.sayHello = function () { }
+// }
+
+function stu_02(name, age) {
+    this.age = age
+    person_02.call(this, name)
+}
+
+let s1_02 = new stu_02("ahmed", 20)
+
+
+
 // ========================================
 console.log("---02---");
 // ========================================
 
-
 // ======== (03) ========
-function fun_03(item) {
-    // var this = {}
 
-    this.name = item
-    this.Hello_fun = function () {
-        console.log("hello");
-    }
-
-    // return this;
+function Student_03(name) {
+    this.name = name;
 }
 
-const obj_03 = new fun_03("hamza")
-console.log(obj_03)
+let s1_03 = new Student_03("ahmed", 20);
+
 
 // ========================================
 console.log("---03---");
 // ========================================
 
-
 // ======== (04) ========
-function fun_04(item) {
-    // var this = {}
 
-    this.name = item
-    this.Hello_fun = function () {
-        console.log("hello");
+let obj_04 = {
+    title: "JavaScript",
+    test: function () {
+        console.log("test code");
     }
-
-    // return this;
 }
-
-const obj_04 = new fun_03("hamza")
-console.log(obj_03.constructor)
 
 // ========================================
 console.log("---04---");
@@ -141,17 +85,17 @@ console.log("---04---");
 
 // ======== (05) ========
 
-let obj_05 = {
-    name: "hamza",
-    hello_fun_05: function () {
-        console.log("hello");
-    },
+let a_05 = {
+    title: "java"
 }
 
-let obj_051 = {}
-let obj_052 = new Object()
+// Object.keys(a_05)
+console.log(Object.keys(a_05))
 
-console.log(obj_05.constructor)
+let per_obj_05 = Object.getPrototypeOf(a_05)
+
+let desc_05 = Object.getOwnPropertyDescriptor(per_obj_05, "toString")
+console.log(desc_05)
 
 // ========================================
 console.log("---05---");
@@ -159,26 +103,54 @@ console.log("---05---");
 
 // ======== (06) ========
 
-let obj_06_car = {}
+let a_06 = {
+    title: "java"
+};
 
+Object.defineProperty(a_06, "title", {
+    configurable: false,
+    writable: true,
+    enumerable: true,
+})
 
-obj_06_car.name = "bmw"
+// delete a_06.title
+a_06.title = "css"
 
-let obj_06_model = "model"
-
-obj_06_car[obj_06_model] = 2020
-
-
-delete obj_06_car["model"]
-delete obj_06_car["name"]
-delete obj_06_car.name
-
-console.log(obj_06_car)
-
-
-
+// console.log(a_06)
+console.log(Object.keys(a_06))
 
 // ========================================
 console.log("---06---");
 // ========================================
+
+// ======== (07) ========
+
+function person_07(name) {
+    this.name = name
+}
+
+let p_07 = new person_07("ahmed")
+
+person_07.prototype = p_07.__proto__
+
+// ========================================
+
+console.log("---07---");
+// ========================================
+
+// ======== (08) ========
+
+function person_08(name) {
+    this.name = name
+}
+
+let p_08 = new person_08("ahmed")
+
+person_08.prototype = p_08.__proto__
+
+// ========================================
+
+console.log("---08---");
+// ========================================
+
 
