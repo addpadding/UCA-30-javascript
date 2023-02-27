@@ -1,398 +1,401 @@
-
-
 // ======== (01) ========
 
-function cat_01() { }
-
-cat_01.prototype.walk = function () {
-    console.log("cat walk")
+class Student_01 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 }
 
-let obj_01 = new cat_01()
-console.log(obj_01)
+const obj_st_01 = new Student_01("hamza", 20)
+console.log(obj_st_01)
+
+
 // ========================================
 console.log("---01---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (02) ========
 
-function cat_02() { }
+class Student_02 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
 
-cat_02.prototype.walk = function () {
-    console.log("cat walk")
+        this.info = function () {
+            console.log(`Name: ${this.name} and age : ${this.age}`);
+        }
+    }
 }
 
+const obj_st_02 = new Student_02("hamza", 20)
+console.log(obj_st_02)
+obj_st_02.info()
 
-
-function Rabbit_02() { }
-
-Rabbit_02.prototype.walk = function () {
-    console.log("Rabbit walk")
-}
-
-
-
-let obj_02 = new cat_02()
-console.log(obj_02)
 
 // ========================================
 console.log("---02---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (03) ========
 
-function Animal_03() { }
+class Student_03 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
-Animal_03.prototype.walk = function () {
-    console.log("cat walk")
+    info() {
+        console.log(`Name: ${this.name} and age : ${this.age}`);
+    }
 }
 
-function cat_03() {
-    // this.run_03 = function () {
-    //     console.log("run_03")
-    // }
-}
+const obj_st_03 = new Student_03("hamza", 20)
+console.log(obj_st_03)
+obj_st_03.info()
 
-// Object.create(Animal_03.prototype)
-
-cat_03.prototype = Object.create(Animal_03.prototype)
-
-// cat_03.prototype.walk = function () {
-//     console.log("cat walk")
-// }
-
-
-let obj_03 = new cat_03()
-console.log(obj_03)
+console.log(typeof Student_03)
 
 // ========================================
 console.log("---03---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (04) ========
 
-function Animal_04() { }
-Animal_04.prototype.walk = function () {
-    console.log("cat walk")
+class Student_04 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    info() {
+        console.log(`Name: ${this.name} and age : ${this.age}`);
+    }
 }
 
-function cat_04() { }
+const obj_st_04 = new Student_04("hamza", 20)
+console.log(obj_st_04)
+obj_st_04.info()
 
-cat_04.prototype = Object.create(Animal_04.prototype)
-cat_04.prototype.constructor = cat_04
-cat_04.prototype.run_04 = function () {
-    console.log("run_04")
-}
+console.log(typeof Student_04)
 
 
+function hamada_1() { }
 
-let obj_04 = new cat_04()
-console.log(obj_04)
+const hamada_2 = function () { }
+
+class hamada_3 { }
+
+const hamada_4 = class { }
 
 // ========================================
 console.log("---04---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
+// ======== (05) ========
+
+class Math {
+
+    static abs() { }
+
+    abs() { }
+
+}
+
+Math.abs()
+
+class Student_05 {
+
+    test = 1;
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    info() {
+    }
+}
+
+// Student_05.
+
+// const st = new Student_01()
+// st.
+
+
+// ========================================
+console.log("---05---");
+// ========================================
+
+// =
+// =
+// =
+// =
+// =
+
 // ======== (06) ========
 
-function Animal_06(name) {
-    this.name = name
+
+class Student_06 {
+
+    static number;
+    // static get_number() { }
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    info() {
+    }
 }
 
-Animal_06.prototype.walk = function () {
-    console.log("cat walk")
-}
+// Student_06.get_number()
 
-function cat_06(name) {
-    Animal_06.call(this, name)
-}
+// const st_06 = new Student_06()
+// st_06.get_number()
 
-cat_06.prototype = Object.create(Animal_06.prototype)
-cat_06.prototype.constructor = cat_06
-
-
-
-
-let obj_06 = new cat_06("cat")
-console.log(obj_06)
 
 // ========================================
 console.log("---06---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (07) ========
 
-function Animal_07(name) {
-    this.name = name
+// "use strict";
+
+const Student_07 = function () {
+    this.info = function () {
+        console.log(this)
+    }
 }
 
-Animal_07.prototype.walk = function () {
-    console.log("cat walk")
-}
+const st_07 = new Student_07();
+st_07.info(); // method call
 
-function cat_07(name) {
-    Animal_07.call(this, name)
-}
-
-cat_07.prototype = Object.create(Animal_07.prototype)
-cat_07.prototype.constructor = cat_07
-// ==============
-
-function Rabbit_07(name) {
-    Animal_07.call(this, name)
-}
-
-Rabbit_07.prototype = Object.create(Animal_07.prototype)
-Rabbit_07.prototype.constructor = Rabbit_07
-// ==============
-
-
-
-
-let obj_07 = new cat_07("cat")
-let obj_07_2 = new Rabbit_07("rabbit")
-console.log(obj_07)
-console.log(obj_07_2)
+const s_07 = st_07.info;
+s_07(); // function call
 
 // ========================================
 console.log("---07---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (08) ========
 
-function extend_08(Child, Parent) {
-    Child.prototype = Object.create(Parent.prototype)
-    Child.prototype.constructor = Child
+
+class Student_08 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    info() {
+        console.log(this)
+    }
 }
 
-function Animal_08(name) {
-    this.name = name
-}
+const st_08 = new Student_08();
+st_08.info();
 
-Animal_08.prototype.walk = function () {
-    console.log("cat walk")
-}
+const s_08 = st_08.info;
+s_07();
 
-function cat_08(name) {
-    Animal_08.call(this, name)
-}
-
-extend_08(cat_08, Animal_08)
-// ==============
-
-function Rabbit_08(name) {
-    Animal_08.call(this, name)
-}
-
-extend_08(Rabbit_08, Animal_08)
-// ==============
-
-
-
-
-let obj_08 = new cat_08("cat")
-let obj_08_2 = new Rabbit_08("rabbit")
-console.log(obj_08)
-console.log(obj_08_2)
 
 // ========================================
 console.log("---08---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (09) ========
 
-function extend_09(Child, Parent) {
-    Child.prototype = Object.create(Parent.prototype)
-    Child.prototype.constructor = Child
+
+class Student_09 {
+    constructor(name, age) {
+        let _name = name
+        let _age = age
+
+
+        this.setName = function (name) {
+            _name = name
+        }
+
+        this.setAge = function (age) {
+            _age = age
+        }
+
+        this.get_name = function () {
+            return _name
+        }
+
+        this.get_age = function () {
+            return _age
+        }
+
+    }
+
 }
 
-function Animal_09(name) {
-    this.name = name
-}
-
-Animal_09.prototype.walk = function () {
-    console.log("walk")
-}
-
-function cat_09(name) {
-    Animal_09.call(this, name)
-}
-
-extend_09(cat_09, Animal_09)
-
-cat_09.prototype.walk = function () {
-    console.log("cat walk")
-}
-// ==============
-
-function Rabbit_09(name) {
-    Animal_09.call(this, name)
-}
-
-extend_09(Rabbit_09, Animal_09)
-
-Rabbit_09.prototype.walk = function () {
-    console.log("Rabbit walk")
-}
-// ==============
+const obj_09 = new Student_09();
+obj_09.setName("hamza")
+obj_09.setAge(20)
 
 
+const new_name_09 = obj_09.get_name()
+const new_age_09 = obj_09.get_age()
+
+console.log(new_name_09, new_age_09)
 
 
-let obj_cat_09 = new cat_09("cat")
-let obj_rabbit_09 = new Rabbit_09("rabbit")
-console.log(obj_cat_09)
-console.log(obj_rabbit_09)
+// console.log(obj_09)
 
 // ========================================
-console.log("---09--- overriding");
+console.log("---09---");
 // ========================================
+
+// =
+// =
+// =
+// =
+// =
 
 // ======== (10) ========
 
-let can_walk_10 = {
-    walk: function () {
-        console.log("walk")
+
+class Person_10 {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
     }
-}
 
-let can_swim_10 = {
-    swim: function () {
-        console.log("swim")
+    data_10() {
+        // console.log(this.name, this.age);
+        console.log("test");
     }
+
 }
 
-// ====(cat)====
-function Cat_10(name) {
-    this.name = name
-}
+class Student_10 extends Person_10 { }
 
+const obj_10 = new Student_10();
 
-Object.assign(Cat_10.prototype, can_walk_10)
-// ===
+obj_10.data_10()
 
-// ====(fish)====
-function fish_10(name) {
-    this.name = name
-}
-
-
-Object.assign(fish_10.prototype, can_swim_10)
-// ===
-
-const obj_cat_10 = new Cat_10("cat")
-const obj_fish_10 = new fish_10("fish")
-console.log(obj_cat_10)
-console.log(obj_fish_10)
-
+// console.log(obj_10)
 
 
 // ========================================
 console.log("---10---");
-// ========================================
+
+// =
+// =
+// =
+// =
+// =
 
 // ======== (11) ========
 
-// walk
-let can_walk_11 = {
-    walk: function () {
-        console.log("walk")
+
+class Person_11 {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+
+    data_11() {
+        console.log(this.name, this.age);
+    }
+
+}
+
+class Student_11 extends Person_11 {
+    constructor(name, age) {
+        super(name, age)
     }
 }
 
-// run
-let can_run_11 = {
-    run: function () {
-        console.log("run")
-    }
-}
-
-// swim
-let can_swim_11 = {
-    swim: function () {
-        console.log("swim")
-    }
-}
-
-// ====(cat)====
-function Cat_11(name) {
-    this.name = name
-}
-
-
-Object.assign(Cat_11.prototype, can_walk_11, can_run_11)
-// ===
-
-// ====(fish)====
-function fish_11(name) {
-    this.name = name
-}
-
-
-Object.assign(fish_11.prototype, can_swim_11, can_run_11)
-// ===
-
-const obj_cat_11 = new Cat_11("cat")
-const obj_fish_11 = new fish_11("fish")
-console.log(obj_cat_11)
-console.log(obj_fish_11)
-
+const obj_11 = new Student_11("hamza", 20);
 
 
 // ========================================
 console.log("---11---");
 // ========================================
 
+// =
+// =
+// =
+// =
+// =
+
 // ======== (12) ========
 
-function mixin_12(obj, ...params) {
-    Object.assign(obj, ...params)
+
+class Person_12 {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+
+    data_12() {
+        console.log(this.name, this.age);
+    }
+
 }
 
-// walk
-let can_walk_12 = {
-    walk: function () {
-        console.log("walk")
+class Student_12 extends Person_12 {
+    constructor(name, age) {
+        super(name, age)
+    }
+
+    data_12() {
+        super.data_12()
+        console.log("test");
     }
 }
 
-// run
-let can_run_12 = {
-    run: function () {
-        console.log("run")
-    }
-}
+const obj_12 = new Student_12("hamza", 20);
 
-// swim
-let can_swim_12 = {
-    swim: function () {
-        console.log("swim")
-    }
-}
-
-// ====(cat)====
-function Cat_12(name) {
-    this.name = name
-}
-
-
-mixin_12(Cat_12.prototype, can_walk_12, can_run_12)
-// ===
-
-// ====(fish)====
-function fish_12(name) {
-    this.name = name
-}
-
-
-mixin_12(fish_12.prototype, can_swim_12, can_run_12)
-// ===
-
-const obj_cat_12 = new Cat_12("cat")
-const obj_fish_12 = new fish_12("fish")
-console.log(obj_cat_12)
-console.log(obj_fish_12)
-
+obj_12.data_12()
 
 
 // ========================================
